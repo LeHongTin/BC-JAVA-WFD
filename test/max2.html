@@ -1,0 +1,27 @@
+<html>
+
+<body>
+    <script>
+        var a = new Array(243, 64, 12, 264, 23, 6, 2, 500, 3);
+        var m1 = a[0];
+        var m2 = a[1];
+        if (m1 < m2) {
+            m1 = a[1];
+            m2 = a[0];
+        }
+        for (var i = 2; i < a.length; i++) {
+            if (a[i] > m1) {
+                m2 = m1;
+                m1 = a[i];
+            } 
+            else if (a[i] > m2) {
+                m2 = a[i];
+            }
+        }
+        console.log(m1, m2);
+
+        document.write(m2);
+    </script>
+</body>
+
+</html>

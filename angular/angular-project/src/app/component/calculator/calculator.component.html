@@ -1,0 +1,15 @@
+
+<div class="alert alert-danger">
+    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+    <strong>Calculator</strong>
+</div>
+
+<div>
+    <input type="number" [value]="first" (change)="onChangeFirst($event.target.value)">
+    <input type="button" [value]="operator" (change)="onChangeOperator($event.target.value)"  value='+' >
+    <input type="number" [value]="second" (change)="onChangeSecond($event.target.value)">
+    <button class="form-input" (click)="calculator()">Thuc thi</button>
+</div>
+<div class="output">
+    Result: {{output}}
+</div>

@@ -1,0 +1,15 @@
+<h2>Danh sach book</h2>
+<div *ngFor='let book of books'>
+    {{book.id}}
+    {{book.name}}
+    {{book.read}}
+</div>
+
+<div>
+    <p>Create</p>
+        <div >
+            <input type="text" [(ngModel)]="book.name">
+            <button (click)=createBook(book)>Create</button>    
+        </div>
+
+</div>
